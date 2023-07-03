@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/modal_window/static/css/main.f3391a72.css",
+    "main.js": "/modal_window/static/js/main.68aa2c4f.js",
+    "index.html": "/modal_window/index.html",
+    "main.f3391a72.css.map": "/modal_window/static/css/main.f3391a72.css.map",
+    "main.68aa2c4f.js.map": "/modal_window/static/js/main.68aa2c4f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f3391a72.css",
+    "static/js/main.68aa2c4f.js"
+  ]
+}
