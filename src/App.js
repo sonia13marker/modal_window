@@ -1,23 +1,35 @@
-import logo from './logo.svg';
+import { Button, Modal, Space, Typography } from 'antd';
 import './App.css';
+import { useState } from 'react';
+
+const { Text } = Typography;
 
 function App() {
+
+  const [activeModal, setActiveModal] = useState(false);
+
+  function openModal() {
+    setActiveModal(true);
+  }
+
+  function closeOk() {
+    setActiveModal(false);
+  }
+
+  function closeCancel() {
+    setActiveModal(false);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <Button type="primary" size='large' onClick={() => openModal()}>Click me, please!</Button>
+       <Modal title="Oh, I was discovered..." 
+       open={activeModal} 
+       onOk={closeOk} 
+       onCancel={closeCancel}
+       centered> 
+          <Text level={2} style={{margin: '20px 0', display: 'block'}}>Hi, I'm modal window!</Text>
+       </Modal>
     </div>
   );
 }
